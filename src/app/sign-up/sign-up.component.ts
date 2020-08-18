@@ -29,18 +29,15 @@ export class SignUpComponent implements OnInit {
       alert("Please Enter Last Name");
     } else if (this.email == '' || this.email === null || this.email.length == 0) {
       alert("Please Enter Email");
-    } else if (this.email.length > 0) {
-      if (!(this.email.includes("@"))) {
-        alert("Please Enter A Valid Email-Id With @");
-      }
+    } else if (this.email.length > 0 && !(this.email.includes("@"))) {
+      alert("Please Enter A Valid Email-Id With @");
     } else if (this.phoneNum == '' || this.phoneNum === null) {
       alert("Please Enter Phone Number");
     } else if (this.password == '' || this.password === null) {
       alert("Please Enter Password");
     } else if (this.cpassword == '' || this.cpassword === null) {
       alert("Please Enter Confirm Password");
-    }
-    else if (this.password !== this.cpassword && this.cpassword.length != 0 && this.password.length != 0) {
+    } else if (this.password !== this.cpassword && this.cpassword.length != 0 && this.password.length != 0) {
       alert("Confirm Password Not Matched With Password");
     } else if (this.answer == '' || this.answer === null) {
       alert("Please Enter Answer");
@@ -66,9 +63,12 @@ export class SignUpComponent implements OnInit {
                     if (this.email.includes("@")) {
                       //alert("Please Enter A Valid Email-Id With @");
                       if (this.password === this.cpassword) {
-                        alert("Request Form Submitted Successfully You Are Redirect To Login !!");
-                        this.onClearAnotherForm();
-                        this.router.navigate(['/login']);
+                        let status = confirm("Register Form Submitted Successfully Press OK To Redirect To Login !!");
+                        if (status == true) {
+                          this.router.navigate(['/login']);
+                        } else {
+                          this.onClearAnotherForm();
+                        }
                       }
                     }
                   }

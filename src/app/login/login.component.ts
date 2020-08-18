@@ -13,6 +13,9 @@ export class LoginComponent implements OnInit {
   password = new String;
   errorMessage = 'Invalid Credentails';
   invalidLogin = false;
+  rememberMe = new Object;
+
+
 
   constructor(private router: Router, private hardcodedAuthenticationServiceService: HardcodedAuthenticationServiceService) { }
 
