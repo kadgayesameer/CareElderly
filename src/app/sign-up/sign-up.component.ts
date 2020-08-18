@@ -23,31 +23,24 @@ export class SignUpComponent implements OnInit {
     //console.log("inside submit");
     if (this.firstname == '' || this.firstname === null) {
       alert("Please Enter First Name");
-    }
-    if (this.lastname == '' || this.lastname === null) {
+    } else if (this.lastname == '' || this.lastname === null) {
       alert("Please Enter Last Name");
-    }
-    if (this.email == '' || this.email === null || this.email.length == 0) {
+    } else if (this.email == '' || this.email === null || this.email.length == 0) {
       alert("Please Enter Email");
-    }
-    if (this.email.length > 0) {
+    } else if (this.email.length > 0) {
       if (!(this.email.includes("@"))) {
         alert("Please Enter A Valid Email-Id With @");
       }
-    }
-    if (this.phoneNum == '' || this.phoneNum === null) {
+    } else if (this.phoneNum == '' || this.phoneNum === null) {
       alert("Please Enter Phone Number");
-    }
-    if (this.password == '' || this.password === null) {
+    } else if (this.password == '' || this.password === null) {
       alert("Please Enter Password");
-    }
-    if (this.cpassword == '' || this.cpassword === null) {
+    } else if (this.cpassword == '' || this.cpassword === null) {
       alert("Please Enter Confirm Password");
     }
-    if (this.password !== this.cpassword && this.cpassword.length != 0 && this.password.length != 0) {
+    else if (this.password !== this.cpassword && this.cpassword.length != 0 && this.password.length != 0) {
       alert("Confirm Password Not Matched With Password");
-    }
-    if (this.answer == '' || this.answer === null) {
+    } else if (this.answer == '' || this.answer === null) {
       alert("Please Enter Answer");
     }
 

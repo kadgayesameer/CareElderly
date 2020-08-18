@@ -24,16 +24,14 @@ export class LoginComponent implements OnInit {
     if (this.username.length == 0) {
       alert("Username Should Not Be Empty");
       this.invalidLogin = true;
-    } else if (this.username.length > 0) {
-      if (!(this.username.includes("@"))) {
-        alert("Please Enter A Valid Username With @");
-        this.invalidLogin = true;
-      }
-    }
-    if (this.password.length == 0) {
+    } else if (this.username.length > 0 && !(this.username.includes("@"))) {
+      alert("Please Enter A Valid Username With @");
+      this.invalidLogin = true;
+    } else if (this.password.length == 0) {
       alert("Password Should Not Be Empty");
       this.invalidLogin = true;
     }
+
     if (this.username.length > 0 && this.username.includes("@") && this.password.length > 0) {
       if (this.hardcodedAuthenticationServiceService.authenticate(this.username, this.password)) {
         this.invalidLogin = false;

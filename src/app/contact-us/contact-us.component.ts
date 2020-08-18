@@ -21,25 +21,25 @@ export class ContactUsComponent implements OnInit {
     // console.log("Inside onSubmitContactUs()");
     if (this.name == '' || this.name === null) {
       alert("Please Enter a Name");
-    }
-    if (this.phone == '' || this.phone === null) {
+    } else if (this.phone == '' || this.phone === null) {
       alert("Please Enter Phone Number");
-    }
-    if (this.email == '' || this.email === null || this.email.length == 0) {
+    } else if (this.email == '' || this.email === null || this.email.length == 0) {
       alert("Please Enter Email");
-    }
-    if (this.email.length > 0) {
-      if (!(this.email.includes("@"))) {
-        alert("Please Enter A Valid Email-Id With @");
-      }
-    }
-    if (this.text == '' || this.text === null) {
+    } else if (this.email.length > 0 && !(this.email.includes("@"))) {
+      alert("Please Enter A Valid Email-Id With @");
+    } else if (this.text == '' || this.text === null) {
       alert("Please Enter Something In Help Section");
-    }
-    if (this.name.length > 0 && this.phone.length > 0 && this.email.length > 0 && this.email.includes("@") && this.text.length > 1) {
+    } else if (this.name.length > 0 && this.phone.length > 0 && this.email.length > 0 && this.email.includes("@") && this.text.length > 1) {
       alert("Request Sent Successfully");
-    }else{
+      this.clearForm();
+    } else {
       alert("Ooops!! Something Un Filled In Form");
     }
+  }
+  clearForm() {
+    this.name = '';
+    this.phone = '';
+    this.email = '';
+    this.text = '';
   }
 }

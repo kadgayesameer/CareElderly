@@ -33,30 +33,21 @@ export class HealthTrackerComponent implements OnInit {
 
     if (this.fullname === '' || this.fullname === null || this.fullname.length == 0) {
       alert("Please Enter Fullname");
-    }
-    if (this.age === '' || this.age === null || this.age.length == 0) {
+    } else if (this.age === '' || this.age === null || this.age.length == 0) {
       alert("Please Enter Age");
-    }
-    if (this.bloodGroup === '' || this.bloodGroup === null || this.bloodGroup.length == 0) {
+    } else if (this.bloodGroup === '' || this.bloodGroup === null || this.bloodGroup.length == 0) {
       alert("Please Enter Blood Group");
-    }
-    if (this.bp === '' || this.bp === null || this.bp.length == 0) {
+    } else if (this.bp === '' || this.bp === null || this.bp.length == 0) {
       alert("Please Enter BP Section");
-    }
-
-    if (this.heart === '' || this.heart === null || this.heart.length == 0) {
+    } else if (this.heart === '' || this.heart === null || this.heart.length == 0) {
       alert("Please Enter Heart Problems");
-    }
-    if (this.disease === '' || this.disease === null || this.disease.length == 0) {
+    } else if (this.disease === '' || this.disease === null || this.disease.length == 0) {
       alert("Please Enter Disease You Have");
-    }
-    if (this.fever === '' || this.fever === null || this.fever.length == 0) {
+    } else if (this.fever === '' || this.fever === null || this.fever.length == 0) {
       alert("Please Enter Fever Section");
-    }
-    if (this.travel === '' || this.travel === null || this.travel.length == 0) {
+    } else if (this.travel === '' || this.travel === null || this.travel.length == 0) {
       alert("Please Enter Travel History");
-    }
-    if (this.brief === '' || this.brief === null || this.brief.length == 0) {
+    } else if (this.brief === '' || this.brief === null || this.brief.length == 0) {
       alert("Please Enter Breif Health Problems You Have");
     }
 
@@ -108,13 +99,13 @@ export class HealthTrackerComponent implements OnInit {
         alert("You Dam Fine Travel With Taking The Precautions");
         this.result = ': You Dam Fine Travel With Taking The Precautions';
       } else if (this.mediumRishkFactor >= 0 && this.mediumRishkFactor <= 14 || this.highRishkFactor <= 10 && this.highRishkFactor >= 0) {
-        alert("You Are Feet For Travel But You Need To Take More Precautions.");
-        this.result = ': You Are Feet For Travel But You Need To Take More Precautions.';
+        alert("You Are Fit For Travel But You Need To Take More Precautions.");
+        this.result = ': You Are Fit For Travel But You Need To Take More Precautions.';
       } else if (this.mediumRishkFactor <= 30 && this.mediumRishkFactor >= 15 || this.highRishkFactor >= 11 && this.highRishkFactor <= 30) {
-        alert("You Are Not Feet For Travel But Avoid If Not Having Emergency Work.");
-        this.result = ': You Are Not Feet For Travel, Avoid If Not Having Emergency Work.';
+        alert("You Are Not Fit For Travel But Avoid If Not Having Emergency Work.");
+        this.result = ': You Are Not Fit For Travel, Avoid If Not Having Emergency Work.';
       }
-
+ 
       this.LowRishkFactor = 0;
       this.mediumRishkFactor = 0;
       this.highRishkFactor = 0;

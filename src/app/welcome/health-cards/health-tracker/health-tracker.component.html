@@ -3,7 +3,7 @@
   <!-- <h1 class="display-4">Heath Tracker</h1> -->
   <img class="rounded img-fluid mx-auto d-block" src="assets/img/cardSamplePics/health-check-Card-Png.png"
     alt="Card image" style="width:22%; height: 190px;">
-  <h1><span class="display-4 ml-4">Health Tracker</span></h1>
+  <h1><span class="display-4 ml-4">Travel Health Tracker</span></h1>
   <hr>
   <p class="lead">For a senior, travel can be an excellent way to stimulate the mind, connect with a wider community,
     and just have fun. Exploring new environments and meeting new people can help older adults stay both physically
@@ -22,12 +22,10 @@
 <div class="container pt-4">
   <div class="card m-4 border border-dark">
     <div class="card-header bg-dark text-white">
-      <h2 class="text-center">For CheckUp Fill Details Below</h2>
+      <h2 class="text-center">For Quick Health Check Up Fill Below Details</h2>
     </div>
     <div class="card-body">
       <div class="col-sm-12">
-
-
         <form #regForm="ngForm" (ngSubmit)="register(regForm)" class="needs-validation">
           <div class="col-sm-12">
             <div class="form-group">
@@ -72,7 +70,7 @@
             <div class="row">
               <div class="col-sm-4">
                 <div class="form-group">
-                  <label for="sel1">Do You Have BP(Blood Pressure):</label>
+                  <label for="sel1">Do You Have BP(Blood Pressure) Problem:</label>
                   <select class="form-control" name="bp" [(ngModel)]="bp">
                     <!-- <option>--SELECT--</option> -->
                     <option>Yes</option>
@@ -83,7 +81,7 @@
 
               <div class="col-sm-4">
                 <div class="form-group">
-                  <label for="sel1">Do You Have Sugar:</label>
+                  <label for="sel1">Do You Have Sugar Problem:</label>
                   <select class="form-control" name="sugar" [(ngModel)]="sugar">
                     <!-- <option>--SELECT--</option> -->
                     <option>Yes</option>
@@ -120,7 +118,7 @@
 
               <div class="col-sm-4">
                 <div class="form-group">
-                  <label for="sel1">Having Fever In Between Past 10days:</label>
+                  <label for="sel1">Having Fever In Between Past 10 Days:</label>
                   <select class="form-control" name="fever" [(ngModel)]="fever">
                     <!-- <option>--SELECT--</option> -->
                     <option>Yes</option>
