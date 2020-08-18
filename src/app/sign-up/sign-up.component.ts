@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-sign-up',
@@ -14,7 +15,8 @@ export class SignUpComponent implements OnInit {
   email = new String;
   phoneNum = new String;
   answer = new String;
-  constructor() { }
+
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
@@ -64,8 +66,9 @@ export class SignUpComponent implements OnInit {
                     if (this.email.includes("@")) {
                       //alert("Please Enter A Valid Email-Id With @");
                       if (this.password === this.cpassword) {
-                        alert("Thank You Signing Form Submitted Successfully Now Go To Login !!");
+                        alert("Request Form Submitted Successfully You Are Redirect To Login !!");
                         this.onClearAnotherForm();
+                        this.router.navigate(['/login']);
                       }
                     }
                   }
