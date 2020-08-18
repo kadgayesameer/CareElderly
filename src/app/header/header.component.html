@@ -1,0 +1,68 @@
+<nav class="navbar fixed-top navbar-expand-sm bg-dark navbar-dark">
+  <!-- Brand/logo -->
+  <a class="navbar-brand" [routerLink]="['/home']" routerLinkActive="router-link-active">
+    <img src="assets/img/logo/oldMan1.jpeg" class="rounded" alt="logo" style="width:40px;">&nbsp;&nbsp;<span>CARE
+      ELDERLY</span>
+  </a>
+
+  <!-- Toggler/collapsibe Button -->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <!-- Navbar links -->
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav">
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+          <!-- {{name}} -->&nbsp;<span
+            *ngIf="hardcodedAuthenticationServiceService.isUserLoggedIn()">{{hardcodedAuthenticationServiceService.getUserName()}}</span>
+          <span *ngIf="!hardcodedAuthenticationServiceService.isUserLoggedIn()">Create An Account</span>
+        </a>
+        <div class="dropdown-menu mr-4" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" [routerLink]="['/signUp']" routerLinkActive="router-link-active"
+            *ngIf="!hardcodedAuthenticationServiceService.isUserLoggedIn()">Sign Up</a>
+          <div class="dropdown-divider" *ngIf="!hardcodedAuthenticationServiceService.isUserLoggedIn()"></div>
+          <a class="dropdown-item" [routerLink]="['/login']" routerLinkActive="router-link-active"
+            *ngIf="!hardcodedAuthenticationServiceService.isUserLoggedIn()">Log In</a>
+          <div class="dropdown-divider" *ngIf="!hardcodedAuthenticationServiceService.isUserLoggedIn()"></div>
+          <a class="dropdown-item" [routerLink]="['/logout']" routerLinkActive="router-link-active"
+            *ngIf="hardcodedAuthenticationServiceService.isUserLoggedIn()">Log Out</a>
+
+
+          <!-- <a class="dropdown-item" href="#">Something else here</a> -->
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/home']" routerLinkActive="router-link-active"
+          *ngIf="hardcodedAuthenticationServiceService.isUserLoggedIn()">Home</a>
+      </li>
+      <li class="nav-item">
+        <div class="nav-link" (click)="toContentNgo($event)"
+          *ngIf="hardcodedAuthenticationServiceService.isUserLoggedIn() && !urlManageServiceService.checkUrlAndHide()">
+          AboutUs</div>
+      </li>
+      <li class="nav-item">
+        <div class="nav-link" (click)="toContentHealthCheck($event)"
+          *ngIf="hardcodedAuthenticationServiceService.isUserLoggedIn() && !urlManageServiceService.checkUrlAndHide()">
+          HealthCheck</div>
+      </li>
+      <li class="nav-item">
+        <div class="nav-link" (click)="toContentHealthTraker($event)"
+          *ngIf="hardcodedAuthenticationServiceService.isUserLoggedIn() && !urlManageServiceService.checkUrlAndHide()">
+          HealthTracker</div>
+      </li>
+      <li class="nav-item">
+        <div class="nav-link" (click)="toContentBegars($event)"
+          *ngIf="hardcodedAuthenticationServiceService.isUserLoggedIn() && !urlManageServiceService.checkUrlAndHide()">
+          Ngo's</div>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<!-- <div class="container-fluid">
+    <h3>Brand / Logo</h3>
+    <p>When using the .navbar-brand class on images, Bootstrap 4 will automatically style the image to fit the navbar.</p>
+  </div> -->

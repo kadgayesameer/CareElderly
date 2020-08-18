@@ -1,0 +1,40 @@
+<br>
+<br>
+<!-- <div class="mt-5"> -->
+<div class="container mt-5">
+  <h3 class="text-center">Contact us</h3><br />
+  <div class="row">
+    <div class="col-md-8">
+      <form action="/post" method="post">
+        <input class="form-control" name="name" placeholder="Name..." [(ngModel)]="name" /><br />
+        <input class="form-control" name="phone" placeholder="Phone..." [(ngModel)]="phone" /><br />
+        <input class="form-control" name="email" placeholder="E-mail..." [(ngModel)]="email" /><br />
+        <textarea class="form-control" name="text" placeholder="How can we help you?" style="height:150px;"
+          [(ngModel)]="text"></textarea><br />
+        <input class="btn btn-primary" type="submit" value="Send" (click)="onSubmitContactUs()" /><br /><br />
+      </form>
+    </div>
+    <div class="col-md-4">
+      <b>Customer service:</b> <br />
+      Phone: +1 129 209 291<br />
+      E-mail: <a href="mailto:support@mysite.com">support@mysite.com</a><br />
+      <br /><br />
+      <b>Headquarter:</b><br />
+      Company Inc, <br />
+      Las vegas street 201<br />
+      55001 Mumbai, India<br />
+      Phone: +1 145 000 101<br />
+      <a href="mailto:usa@mysite.com">usa@mysite.com</a><br />
+
+
+      <br /><br />
+      <b>India:</b><br />
+      Company HK Litd, <br />
+      25/F.168 Queen<br />
+      Nagpur District, India<br />
+      Phone: +852 129 209 291<br />
+      <a href="mailto:hk@mysite.com">hk@mysite.com</a><br />
+    </div>
+  </div>
+  <br><br>
+  <!-- </div> -->

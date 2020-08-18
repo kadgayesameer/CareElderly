@@ -1,0 +1,167 @@
+<br><br>
+<div class="text-center mt-4" id="contentMyHealthTracker">
+  <!-- <h1 class="display-4">Heath Tracker</h1> -->
+  <img class="rounded img-fluid mx-auto d-block" src="assets/img/cardSamplePics/health-check-Card-Png.png"
+    alt="Card image" style="width:22%; height: 190px;">
+  <h1><span class="display-4 ml-4">Health Tracker</span></h1>
+  <hr>
+  <p class="lead">For a senior, travel can be an excellent way to stimulate the mind, connect with a wider community,
+    and just have fun. Exploring new environments and meeting new people can help older adults stay both physically
+    active and socially engaged. Whether the idea is to experience more of the world, spend time with loved ones, or
+    just take a break from the everyday routine, travel can bring enormous rewards. We provide Health Checker which
+    help's to know you
+    are Feet within Travel or Before Travel Planned.
+  </p>
+  <p class="lead">Getting older certainly doesn't have to keep anyone from having new adventures. An AARP(American
+    Association of Retired Persons) survey of
+    adults between
+    the ages of 54 and 72 found that virtually all of them planned to take at least one domestic trip in 2019, and
+    nearly a third anticipated taking four or more trips. What's more, almost half said they expected to travel both
+    within the U.S. and internationally.</p>
+</div>
+<div class="container pt-4">
+  <div class="card m-4 border border-dark">
+    <div class="card-header bg-dark text-white">
+      <h2 class="text-center">For CheckUp Fill Details Below</h2>
+    </div>
+    <div class="card-body">
+      <div class="col-sm-12">
+
+
+        <form #regForm="ngForm" (ngSubmit)="register(regForm)" class="needs-validation">
+          <div class="col-sm-12">
+            <div class="form-group">
+              <label for="name">Full Name:</label>
+              <input type="name" class="form-control" placeholder="Enter Fullname" name="fullname"
+                [(ngModel)]="fullname">
+            </div>
+          </div>
+          <div class="col-sm-12">
+            <div class="row">
+              <div class="col-sm-4">
+                <div class="form-group">
+                  <label for="age">Age:</label>
+                  <input type="name" class="form-control" placeholder="Enter Age" name="age" [(ngModel)]="age">
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <div class="form-group">
+                  <label for="age">Gender:</label>
+                  <div class="form-check ml-4">
+                    <label class="form-check-label" for="radio1">
+                      <input type="radio" class="form-check-input" id="radio1" name="optradio1" value="Male">Male
+                    </label>
+                  </div>
+                  <div class="form-check ml-4">
+                    <label class="form-check-label" for="radio2">
+                      <input type="radio" class="form-check-input" id="radio2" name="optradio2" value="Female">Female
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <div class="form-group">
+                  <label for="age">Blood Group:</label>
+                  <input type="name" class="form-control" id="bloodGroup" placeholder="Enter Blood Group"
+                    name="bloodGroup" [(ngModel)]="bloodGroup">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12">
+            <div class="row">
+              <div class="col-sm-4">
+                <div class="form-group">
+                  <label for="sel1">Do You Have BP(Blood Pressure):</label>
+                  <select class="form-control" name="bp" [(ngModel)]="bp">
+                    <!-- <option>--SELECT--</option> -->
+                    <option>Yes</option>
+                    <option>No</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="col-sm-4">
+                <div class="form-group">
+                  <label for="sel1">Do You Have Sugar:</label>
+                  <select class="form-control" name="sugar" [(ngModel)]="sugar">
+                    <!-- <option>--SELECT--</option> -->
+                    <option>Yes</option>
+                    <option>No</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="col-sm-4">
+                <div class="form-group">
+                  <label for="sel1">Do You Have Any Heart Problems:</label>
+                  <select class="form-control" name="heart" [(ngModel)]="heart">
+                    <!-- <option>--SELECT--</option> -->
+                    <option>Yes</option>
+                    <option>No</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-12">
+            <div class="row">
+              <div class="col-sm-4">
+                <div class="form-group">
+                  <label for="sel1">Do You Have Any Serious Disease:</label>
+                  <select class="form-control" name="disease" [(ngModel)]="disease">
+                    <!-- <option>--SELECT--</option> -->
+                    <option>Yes</option>
+                    <option>No</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="col-sm-4">
+                <div class="form-group">
+                  <label for="sel1">Having Fever In Between Past 10days:</label>
+                  <select class="form-control" name="fever" [(ngModel)]="fever">
+                    <!-- <option>--SELECT--</option> -->
+                    <option>Yes</option>
+                    <option>No</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="col-sm-4">
+                <div class="form-group">
+                  <label for="sel1">Do You Have Any Travel History:</label>
+                  <select class="form-control" name="travel" [(ngModel)]="travel">
+                    <!-- <option>--SELECT--</option> -->
+                    <option>Yes</option>
+                    <option>No</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-12">
+            <div class="form-group">
+              <label for="detail">Explain In Detail:</label>
+              <textarea class="form-control" rows="5" name="brief" placeholder="Explain In Brief"
+                [(ngModel)]="brief"></textarea>
+              <!-- <input type="textarea" class="form-control" id="detail" placeholder="Explain In Brief" name="detail"> -->
+            </div>
+          </div>
+          <div class="text-center">
+            <button type="submit" class="btn btn-success" id="register" [disabled]="regForm.invalid">Submit Check
+              Up</button></div>
+        </form>
+      </div>
+    </div>
+    <div class="card-footer bg-dark text-white text-center">
+      <!-- <button type="submit" class="btn btn-success">Submit Check
+        Up</button> -->
+      <!-- <pre>{{regForm.value | json}}</pre> -->
+      <div class="text-center"><span class="text-white">Result {{result}}</span></div>
+    </div>
+  </div>
+</div>
+<br><br><br><br>
