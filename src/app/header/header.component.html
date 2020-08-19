@@ -44,15 +44,20 @@
           *ngIf="hardcodedAuthenticationServiceService.isUserLoggedIn() && !urlManageServiceService.checkUrlAndHide()">
           AboutUs</div>
       </li>
-      <li class="nav-item">
+      <!-- <li class="nav-item">
         <div class="nav-link" (click)="toContentHealthCheck($event)"
           *ngIf="hardcodedAuthenticationServiceService.isUserLoggedIn() && !urlManageServiceService.checkUrlAndHide()">
+          HealthCheck</div>
+      </li> -->
+      <li class="nav-item">
+        <div class="nav-link" [routerLink]="['/healthTracker']" routerLinkActive="router-link-active"
+          *ngIf="hardcodedAuthenticationServiceService.isUserLoggedIn()">
           HealthCheck</div>
       </li>
       <li class="nav-item">
         <div class="nav-link" (click)="toContentHealthTraker($event)"
           *ngIf="hardcodedAuthenticationServiceService.isUserLoggedIn() && !urlManageServiceService.checkUrlAndHide()">
-          TravelHealthChecker</div>
+          TravellerHealthChecker</div>
       </li>
       <li class="nav-item">
         <div class="nav-link" (click)="toContentBegars($event)"
